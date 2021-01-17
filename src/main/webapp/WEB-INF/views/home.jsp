@@ -5,7 +5,7 @@
 <title>Vehiculator</title>
 </head>
 <body>
-Login
-Sign Up
+<a href="/login"><button>Login</button></a>
+<a href="/register"><button>Sign Up</button></a>
 </body>
 </html>
