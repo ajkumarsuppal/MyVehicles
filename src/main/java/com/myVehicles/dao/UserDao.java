@@ -11,4 +11,6 @@ public interface UserDao {
 
     public void deleteById(long id);
 
+    public User findByUsername(String username);
+
 }

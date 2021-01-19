@@ -36,4 +36,20 @@ public class UserServiceImpl implements UserService {
         userDao.deleteById(id);
     }
 
+    @Override
+    public User getUserByUsername(String username) {
+        return userDao.findByUsername(username);
+    }
+
+    @Override
+    public Boolean loginValidator(String username, String password) {
+        if (username.equals(userDao.findByUsername(username).getUsername())
+                && password.equals(userDao.findByUsername(username).getPassword())) {
+            System.out.println(username);
+            System.out.println(password);
+            return true;
+        }
+        return false;
+    }
+
 }

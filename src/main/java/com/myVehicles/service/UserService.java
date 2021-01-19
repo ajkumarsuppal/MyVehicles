@@ -12,4 +12,8 @@ public interface UserService {
     public List<User> getAllUserDetails();
 
     public void deleteUserDetails(long id);
+
+    public User getUserByUsername(String username);
+
+    Boolean loginValidator(String username, String password);
 }

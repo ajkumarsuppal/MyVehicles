@@ -10,14 +10,14 @@
 
   <body>
     <h2>User Registration Page</h2>
-    <form action="/register/new" method="post" modelAttribute="user">
+    <form:form action="/register/new" method="post" modelAttribute="user">
       <label for="first_name">First Name</label>
       <form:input
         type="text"
         name="first_name"
         id="first_name"
         placeholder="Enter your First Name"
-        path="user.first_name"
+        path="first_name"
       />
       <label for="last_name">Last Name</label>
       <form:input
@@ -25,11 +25,11 @@
         name="last_name"
         id="last_name"
         placeholder="Enter your Last Name"
-        path="user.last_name"
+        path="last_name"
       />
       <br />
       <label for="gender">Gender</label>
-      <form:select name="gender" id="gender" path="user.gender">
+      <form:select name="gender" id="gender" path="gender">
         <option value="">Choose One</option>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
@@ -42,7 +42,7 @@
         name="phone_number"
         id="phone_number"
         placeholder="Enter your 10 digit Mobile Number"
-        path="user.phone_number"
+        path="phone_number"
       />
       <label for="address">Address</label>
       <form:input
@@ -50,7 +50,7 @@
         name="address"
         id="address"
         placeholder="Enter your Address"
-        path="user.address"
+        path="address"
       />
       <br />
       <label for="username">Username</label>
@@ -59,7 +59,7 @@
         name="username"
         id="username"
         placeholder="Enter your Username"
-        path="user.username"
+        path="username"
       />
       <br />
       <label for="password">Password</label>
@@ -68,10 +68,11 @@
         name="password"
         id="password"
         placeholder="Enter your Password"
-        path="user.password"
+        path="password"
       />
       <br />
       <button type="submit">Register</button>
-    </form>
+    </form:form>
+    <a href="/login">Already a user? Log In!</a>
   </body>
 </html>
