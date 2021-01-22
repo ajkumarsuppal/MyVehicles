@@ -1,6 +1,5 @@
 package com.myVehicles.controller;
 
-import com.myVehicles.model.User;
 import com.myVehicles.service.UserServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
