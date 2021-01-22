@@ -73,6 +73,6 @@
       <br />
       <button type="submit">Register</button>
     </form:form>
-    <a href="/login">Already a user? Log In!</a>
+    <a href="/user/login">Already a user? Log In!</a>
   </body>
 </html>

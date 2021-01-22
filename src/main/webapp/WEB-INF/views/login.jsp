@@ -9,7 +9,8 @@
   </head>
   <body>
     <h2>User Login</h2>
-    <form action="/login" method="post">
+    <h3 style="color: red">${error}</h3>
+    <form action="/user/login" method="post">
       <label>Username</label>
       <input
         type="text"
@@ -20,7 +21,7 @@
       <br />
       <label>Password</label>
       <input
-        type="text"
+        type="password"
         name="password"
         placeholder="Password"
         required="true"

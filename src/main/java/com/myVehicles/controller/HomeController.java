@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -38,17 +39,19 @@ public class HomeController {
 		return "redirect:/";
 	}
 
-	@GetMapping("/login")
+	@GetMapping("/user/login")
 	public String loginRoute() {
 		return "login";
 	}
 
-	@PostMapping("/login")
-	public String loginRouter(@RequestParam("username") String username, @RequestParam("password") String password) {
+	@PostMapping("/user/login")
+	public String loginRouter(Model model, @RequestParam("username") String username,
+			@RequestParam("password") String password) {
 		if (userService.loginValidator(username, password)) {
-			return "user/home";
+			return ("redirect:/user/" + username);
 		} else {
-			return "redirect:/";
+			model.addAttribute("error", "Invalid Credentials");
+			return "redirect:user/login";
 		}
 	}
 
