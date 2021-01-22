@@ -7,5 +7,6 @@
   <body>
     <h2>User Home Page</h2>
     <h3>Welcome ${username}</h3>
+    <a href="/logout"><button>Logout</button></a>
   </body>
 </html>

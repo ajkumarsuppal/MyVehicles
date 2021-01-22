@@ -55,4 +55,9 @@ public class HomeController {
 		}
 	}
 
+	@GetMapping("/logout")
+	public String logoutRoute() {
+		return "redirect:/";
+	}
+
 }
